@@ -1,13 +1,13 @@
 cask "openrouter-tracker" do
-  version "1.0.4"
-  sha256 "a25be5dea663c0c27fa4e2fd3dd9c072be9ae7ed1163c1f1f26fad8c6c60f682"
+  version "1.0.5"
+  sha256 "1e1ed3ecf380de2e3bc5cfc01d3777caed8db72aed05fe559528084c428f7263"
 
   url "https://github.com/vyavahareyash/openrouter-tracker/releases/download/v#{version}/OpenRouterTracker.dmg"
   name "OpenRouter Tracker"
   desc "Native macOS desktop widget & companion app for OpenRouter balance and rate limits"
   homepage "https://github.com/vyavahareyash/openrouter-tracker"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "OpenRouterTracker.app"
 
