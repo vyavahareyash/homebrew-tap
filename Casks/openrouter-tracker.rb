@@ -1,6 +1,6 @@
 cask "openrouter-tracker" do
-  version "1.0.2"
-  sha256 "c604c79df66fc54a56a60d522a0cec949de510809d641b31ff58719ab5304c63"
+  version "1.0.3"
+  sha256 "914676e6bb551e5401689ea711cde08a473c6a8d35c0fa0a011a75b684909021"
 
   url "https://github.com/vyavahareyash/openrouter-tracker/releases/download/v#{version}/OpenRouterTracker.dmg"
   name "OpenRouter Tracker"
@@ -12,6 +12,8 @@ cask "openrouter-tracker" do
   app "OpenRouterTracker.app"
 
   postflight do
+    system_command "/usr/bin/xattr",
+         args: ["-cr", "#{appdir}/OpenRouterTracker.app"]
     system_command "/usr/bin/pluginkit",
          args: ["-a", "#{appdir}/OpenRouterTracker.app/Contents/PlugIns/OpenRouterWidgetExtension.appex"]
     system_command "/usr/bin/pluginkit",
