@@ -1,6 +1,6 @@
 cask "openrouter-tracker" do
-  version "1.0.0"
-  sha256 "c7a98caf787c21815a7322e78e6db1682a2d68a8675b177d134f515bf2819607"
+  version "1.0.2"
+  sha256 "c604c79df66fc54a56a60d522a0cec949de510809d641b31ff58719ab5304c63"
 
   url "https://github.com/vyavahareyash/openrouter-tracker/releases/download/v#{version}/OpenRouterTracker.dmg"
   name "OpenRouter Tracker"
@@ -13,11 +13,11 @@ cask "openrouter-tracker" do
 
   postflight do
     system_command "/usr/bin/pluginkit",
-                   args: ["-a", "#{appdir}/OpenRouterTracker.app/Contents/PlugIns/OpenRouterWidgetExtension.appex"]
+         args: ["-a", "#{appdir}/OpenRouterTracker.app/Contents/PlugIns/OpenRouterWidgetExtension.appex"]
     system_command "/usr/bin/pluginkit",
-                   args: ["-e", "use", "-i", "com.openrouter.tracker.widget"]
+         args: ["-e", "use", "-i", "com.openrouter.tracker.widget"]
     system_command "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister",
-                   args: ["-f", "-R", "-trusted", "#{appdir}/OpenRouterTracker.app"]
+         args: ["-f", "-R", "-trusted", "#{appdir}/OpenRouterTracker.app"]
   end
 
   zap trash: [
