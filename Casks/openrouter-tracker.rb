@@ -1,6 +1,6 @@
 cask "openrouter-tracker" do
-  version "1.0.6"
-  sha256 "b2c09ded31535401f9c45a97db2c88843dfa949a4ac7662295f09a46990d8521"
+  version "1.1.0"
+  sha256 "987dc83309fd8bc3492b6218172bc81a953bc6afbd2a12e1486f7419d26446fa"
 
   url "https://github.com/vyavahareyash/openrouter-tracker/releases/download/v#{version}/OpenRouterTracker.dmg"
   name "OpenRouter Tracker"
